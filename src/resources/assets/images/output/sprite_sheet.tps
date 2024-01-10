@@ -26,13 +26,13 @@
             </struct>
         </array>
         <key>allowRotation</key>
-        <false/>
+        <true/>
         <key>shapeDebug</key>
         <false/>
         <key>dpi</key>
         <uint>72</uint>
         <key>dataFormat</key>
-        <string>phaser</string>
+        <string>pixijs4</string>
         <key>textureFileName</key>
         <filename></filename>
         <key>flipPVR</key>
@@ -74,7 +74,7 @@
         <key>textureSubPath</key>
         <string></string>
         <key>textureFormat</key>
-        <enum type="SettingsBase::TextureFormat">webp</enum>
+        <enum type="SettingsBase::TextureFormat">png</enum>
         <key>borderPadding</key>
         <uint>0</uint>
         <key>maxTextureSize</key>
@@ -121,14 +121,14 @@
         </struct>
         <key>dataFileNames</key>
         <map type="GFileNameMap">
-            <key>json</key>
+            <key>data</key>
             <struct type="DataFile">
                 <key>name</key>
-                <filename></filename>
+                <filename>../sprite_sheet.json</filename>
             </struct>
         </map>
         <key>multiPack</key>
-        <true/>
+        <false/>
         <key>forceIdenticalLayout</key>
         <false/>
         <key>outputFormat</key>
@@ -143,9 +143,9 @@
         <key>autoAliasEnabled</key>
         <true/>
         <key>trimSpriteNames</key>
-        <true/>
-        <key>prependSmartFolderName</key>
         <false/>
+        <key>prependSmartFolderName</key>
+        <true/>
         <key>autodetectAnimations</key>
         <true/>
         <key>globalSpriteSettings</key>
@@ -167,14 +167,351 @@
             <key>heuristicMask</key>
             <false/>
             <key>defaultPivotPoint</key>
-            <point_f>0.5,0.5</point_f>
+            <point_f>0,0</point_f>
             <key>writePivotPoints</key>
             <false/>
         </struct>
         <key>individualSpriteSettings</key>
-        <map type="IndividualSpriteSettingsMap"/>
+        <map type="IndividualSpriteSettingsMap">
+            <key type="filename">ball/ball_0.png</key>
+            <key type="filename">ball/ball_1.png</key>
+            <key type="filename">ball/ball_2.png</key>
+            <key type="filename">ball/ball_3.png</key>
+            <key type="filename">ball/ball_4.png</key>
+            <key type="filename">ball/ball_hyper.png</key>
+            <key type="filename">ball/ball_punch.png</key>
+            <key type="filename">ball/ball_trail.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>10,10,20,20</rect>
+                <key>scale9Paddings</key>
+                <rect>10,10,20,20</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/common/game_end.png</key>
+            <key type="filename">messages/ja/game_start.png</key>
+            <key type="filename">messages/ko/game_start.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>24,6,48,12</rect>
+                <key>scale9Paddings</key>
+                <rect>24,6,48,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/common/ready.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>20,6,40,12</rect>
+                <key>scale9Paddings</key>
+                <rect>20,6,40,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/common/sachisoft.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>90,5,180,10</rect>
+                <key>scale9Paddings</key>
+                <rect>90,5,180,10</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/ja/fight.png</key>
+            <key type="filename">messages/ko/fight.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>40,40,80,80</rect>
+                <key>scale9Paddings</key>
+                <rect>40,40,80,80</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/ja/mark.png</key>
+            <key type="filename">messages/ko/mark.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>22,28,44,55</rect>
+                <key>scale9Paddings</key>
+                <rect>22,28,44,55</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/ja/pikachu_volleyball.png</key>
+            <key type="filename">messages/ko/pikachu_volleyball.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>69,20,138,39</rect>
+                <key>scale9Paddings</key>
+                <rect>69,20,138,39</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/ja/pokemon.png</key>
+            <key type="filename">messages/ko/pokemon.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>50,8,100,16</rect>
+                <key>scale9Paddings</key>
+                <rect>50,8,100,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">messages/ja/with_computer.png</key>
+            <key type="filename">messages/ja/with_friend.png</key>
+            <key type="filename">messages/ko/with_computer.png</key>
+            <key type="filename">messages/ko/with_friend.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>30,5,60,10</rect>
+                <key>scale9Paddings</key>
+                <rect>30,5,60,10</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">number/number_0.png</key>
+            <key type="filename">number/number_1.png</key>
+            <key type="filename">number/number_2.png</key>
+            <key type="filename">number/number_3.png</key>
+            <key type="filename">number/number_4.png</key>
+            <key type="filename">number/number_5.png</key>
+            <key type="filename">number/number_6.png</key>
+            <key type="filename">number/number_7.png</key>
+            <key type="filename">number/number_8.png</key>
+            <key type="filename">number/number_9.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,8,16,16</rect>
+                <key>scale9Paddings</key>
+                <rect>8,8,16,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/black.png</key>
+            <key type="filename">objects/net_pillar.png</key>
+            <key type="filename">objects/net_pillar_top.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>2,2,4,4</rect>
+                <key>scale9Paddings</key>
+                <rect>2,2,4,4</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/cloud.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>12,6,24,12</rect>
+                <key>scale9Paddings</key>
+                <rect>12,6,24,12</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/ground_line.png</key>
+            <key type="filename">objects/ground_line_leftmost.png</key>
+            <key type="filename">objects/ground_line_rightmost.png</key>
+            <key type="filename">objects/ground_red.png</key>
+            <key type="filename">objects/ground_yellow.png</key>
+            <key type="filename">objects/sky_blue.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,4,8,8</rect>
+                <key>scale9Paddings</key>
+                <rect>4,4,8,8</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/mountain.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>108,16,216,32</rect>
+                <key>scale9Paddings</key>
+                <rect>108,16,216,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/shadow.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>8,2,16,4</rect>
+                <key>scale9Paddings</key>
+                <rect>8,2,16,4</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">objects/wave.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>4,8,8,16</rect>
+                <key>scale9Paddings</key>
+                <rect>4,8,8,16</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">pikachu/pikachu_0_0.png</key>
+            <key type="filename">pikachu/pikachu_0_1.png</key>
+            <key type="filename">pikachu/pikachu_0_2.png</key>
+            <key type="filename">pikachu/pikachu_0_3.png</key>
+            <key type="filename">pikachu/pikachu_0_4.png</key>
+            <key type="filename">pikachu/pikachu_1_0.png</key>
+            <key type="filename">pikachu/pikachu_1_1.png</key>
+            <key type="filename">pikachu/pikachu_1_2.png</key>
+            <key type="filename">pikachu/pikachu_1_3.png</key>
+            <key type="filename">pikachu/pikachu_1_4.png</key>
+            <key type="filename">pikachu/pikachu_2_0.png</key>
+            <key type="filename">pikachu/pikachu_2_1.png</key>
+            <key type="filename">pikachu/pikachu_2_2.png</key>
+            <key type="filename">pikachu/pikachu_2_3.png</key>
+            <key type="filename">pikachu/pikachu_2_4.png</key>
+            <key type="filename">pikachu/pikachu_3_0.png</key>
+            <key type="filename">pikachu/pikachu_3_1.png</key>
+            <key type="filename">pikachu/pikachu_4_0.png</key>
+            <key type="filename">pikachu/pikachu_5_0.png</key>
+            <key type="filename">pikachu/pikachu_5_1.png</key>
+            <key type="filename">pikachu/pikachu_5_2.png</key>
+            <key type="filename">pikachu/pikachu_5_3.png</key>
+            <key type="filename">pikachu/pikachu_5_4.png</key>
+            <key type="filename">pikachu/pikachu_6_0.png</key>
+            <key type="filename">pikachu/pikachu_6_1.png</key>
+            <key type="filename">pikachu/pikachu_6_2.png</key>
+            <key type="filename">pikachu/pikachu_6_3.png</key>
+            <key type="filename">pikachu/pikachu_6_4.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9Paddings</key>
+                <rect>16,16,32,32</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+            <key type="filename">sitting_pikachu.png</key>
+            <struct type="IndividualSpriteSettings">
+                <key>pivotPoint</key>
+                <point_f>0.5,0.5</point_f>
+                <key>spriteScale</key>
+                <double>1</double>
+                <key>scale9Enabled</key>
+                <false/>
+                <key>scale9Borders</key>
+                <rect>26,26,52,52</rect>
+                <key>scale9Paddings</key>
+                <rect>26,26,52,52</rect>
+                <key>scale9FromFile</key>
+                <false/>
+            </struct>
+        </map>
         <key>fileList</key>
-        <array/>
+        <array>
+            <filename>ball</filename>
+            <filename>messages</filename>
+            <filename>number</filename>
+            <filename>objects</filename>
+            <filename>pikachu</filename>
+            <filename>sitting_pikachu.png</filename>
+        </array>
         <key>ignoreFileList</key>
         <array/>
         <key>replaceList</key>
